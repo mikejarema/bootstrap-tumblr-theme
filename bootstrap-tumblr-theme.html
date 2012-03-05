@@ -1,0 +1,466 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"> 
+  <head> 
+ 
+    <meta name="if:Center photo post captions" content="0" />
+    <meta name="if:Show archive link" content="0" />
+    <meta name="if:Show tags" content="1" />
+    <meta name="text:Post Font" content="Helvetica, Arial" />
+    <meta name="text:Google Analytics UA Code" content="" /> 
+    <meta name="text:Blog Background" content="" />
+ 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <meta name="description" content="{MetaDescription}" /> 
+    <link href="{Favicon}" rel="shortcut icon" /> 
+    <link rel="alternate" type="application/rss+xml" href="{RSS}"> 
+    
+    <title>{block:PostTitle}{PostTitle} - {/block:PostTitle}{Title}{block:Pagination} - {lang:Page CurrentPage of TotalPages}{/block:Pagination}</title> 
+
+    <!-- ======== STYLES ======== -->
+
+    <link href="http://static.tumblr.com/vv8cdma/Pigm0fc2m/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+      body { padding-top: 60px; } /* room for fixed nav-bar */
+      .tags { margin-bottom: 10px;}
+      .tag { margin-bottom: 5px;}
+    </style>
+    <link href="http://static.tumblr.com/vv8cdma/pVJm0fbxk/bootstrap-responsive.min.css" rel="stylesheet">
+
+    <style type="text/css">
+      <!--
+        {CustomCSS}
+      -->
+    </style> 
+ 
+  </head> 
+  <body>
+  
+    <!-- <div class="INSTALL">
+      <a href="http://www.tumblr.com/theme/xxxxx" target="_blank"></a>
+    </div> -->
+  
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+
+          <a class="brand" href="/">
+            {Title}
+          </a>
+
+          <div class="nav-collapse">
+            <ul class="nav">
+              {block:English}
+                <li>
+                  <a href="http://tumblr.com/follow/{Name}">
+                    Follow
+                  </a>
+                </li>
+              {/block:English}
+
+              {block:NotEnglish}
+              <li>
+                <a href="http://tumblr.com/follow/{Name}">{lang:Follow me}</a>
+              </li>
+              {/block:NotEnglish}
+
+              {block:AskEnabled}
+              <li class="divider-vertical"></li>
+              
+              <li>
+                <a href="/ask">Ask Me Anything</a>
+              </li>
+              {/block:AskEnabled}
+
+              {block:SubmissionsEnabled}
+              <li class="divider-vertical"></li>
+            
+              <li>
+                <a href="/submit">Submit Something</a>
+              </li>
+              {/block:SubmissionsEnabled} 
+
+              {block:IfShowArchiveLink}
+              <li class="divider-vertical"></li>
+              
+              <li>
+                <a href="/archive">{lang:Archive}</a>
+              </li>
+              {/block:IfShowArchiveLink}
+              
+              {block:Pages}
+              <li class="divider-vertical"></li>
+              
+              <li>
+                <a href="{URL}">{Label}</a>
+              </li>
+              {/block:Pages}
+            </ul>
+  
+            <form class="navbar-search pull-right" action="/search" method="get">
+              <input type="text" class="search-query" placeholder="{lang:Search}..." id="search" name="q" value="" />
+            </form>
+          </div> <!-- nav-collapse -->
+
+        </div> <!-- container -->
+      </div> <!-- navbar-inner -->
+    </div> <!-- navbar navbar-fixed-top -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <div class="container">
+
+      {block:IndexPage}
+      <div class="hero-unit">
+        <h1>{Title}</h1>
+        <p>{Description}</p>
+      </div>
+      {/block:IndexPage}
+
+      <div class="posts">
+
+        {block:SearchPage}
+        <li class="POST ALT TEXT MINI">
+          <div class="ENTRY">
+            <div class="TITLE CENTER">
+              {lang:Your search for SearchQuery returned SearchResultCount results 2} 
+            </div>
+            {block:NoSearchResults}
+            <div class="TITLE">
+              {lang:No search results for SearchQuery 2}
+            </div>
+            {/block:NoSearchResults}            
+          </div>
+        </li>
+        {/block:SearchPage}
+
+        {block:DayPage}
+        <li class="POST ALT TEXT MINI">
+          <div class="ENTRY">
+            <div class="TITLE CENTER">
+              {lang:Viewing everything posted on Month DayOfMonth Year}
+            </div>            
+          </div>
+        </li>       
+        {/block:DayPage}
+              
+        {block:Posts}
+        <div class="row post {block:Text}text{/block:Text}{block:Photo}photo{/block:Photo}{block:Quote}quote{/block:Quote}{block:Video}video{/block:Video}{block:Link}link{/block:Link}{block:Chat}chat{/block:Chat}{block:Audio}audio{/block:Audio}{block:Answer}answer{/block:Answer}">  
+
+          <div class="span2">
+            <div class="date">
+              {block:Date}
+              {block:NotReblog}
+                <a href="{Permalink}">{lang:Posted TimeAgo}</a>
+              {/block:NotReblog}
+              {block:Reblog}
+                {lang:PostTypeNoun reblogged from ReblogParentTitle 2}
+              {/block:Reblog}
+              {/block:Date}
+
+              {block:HasTags}
+              with tags:
+              {/block:HasTags}
+            </div> <!-- .date -->
+
+            {block:HasTags}
+            <div class="tags">
+              {block:Tags}
+              <a class="tag btn btn-mini" href="{TagURL}">{Tag}</a>
+              {/block:Tags}
+            </div> <!-- .tags -->
+            {/block:HasTags}
+
+            {block:NoteCount} 
+            <div class="notes">
+              <a href="{Permalink}#notes">
+                <i class="icon-heart"></i> {NoteCountWithLabel}
+              </a>
+            </div>
+            {/block:NoteCount} 
+          </div> <!-- .span2 -->
+
+          <div class="span10 entry">
+          
+            <div class="title">
+              
+              {block:Title}
+              <div class="TITLE-TEXT">
+                <a href="{Permalink}">
+                  {Title}
+                </a>
+              </div>
+              {/block:Title}
+                                        
+            </div> <!-- .title -->
+            
+            <div class="POST">
+
+              <!-- ANSWER -->
+              
+              {block:Answer}
+                
+                <div class="QUOTEINFO">
+                  
+                  <div class="QUOTEMARK"></div>
+                  <div class="TEXT">
+                    {Question}
+                  </div>
+                
+                </div>
+                
+                <p>{lang:Asked by Asker}</p>
+                
+                <div class="BREAK"></div>
+                
+                <div class="RESPONSE">
+                
+                  {Answer}
+                
+                </div>
+
+              {/block:Answer}
+              
+              <!-- /ANSWER -->
+              
+              <!-- TEXT -->
+              
+              {block:Text}
+                
+                {Body}
+                
+              {/block:Text}
+              
+              <!-- /TEXT -->
+              
+              <!-- VIDEO -->
+              
+              {block:Video}
+                
+                {Video-500}
+                
+                {block:Caption}
+                  {Caption}
+                {/block:Caption}
+                
+              {/block:Video}
+              
+              <!-- /VIDEO -->
+              
+              <!-- PHOTO -->
+              
+              {block:Photo}
+              
+                <div class="CENTER">
+              
+                  {LinkOpenTag}<img alt="{PhotoAlt}" src="{PhotoURL-500}" />{LinkCloseTag}
+                  
+                  {block:IfCenterPhotoPostCaptions}
+                    {block:Caption}
+                      <div class="CAPTION">
+                        {Caption}
+                      </div>
+                    {/block:Caption}
+                  {/block:IfCenterPhotoPostCaptions}
+                  
+                </div>
+
+                {block:IfNotCenterPhotoPostCaptions}
+                  {block:Caption}
+                    <div class="CAPTION">
+                      {Caption}
+                    </div>
+                  {/block:Caption}
+                {/block:IfNotCenterPhotoPostCaptions}
+                
+              {/block:Photo}
+              
+              <!-- /PHOTO -->
+              
+              <!-- QUOTE -->
+              
+              {block:Quote}
+              
+                <div class="QUOTEINFO">
+                  
+                  <div class="QUOTEMARK"></div>
+                  <div class="TEXT">
+                    {Quote}
+                  </div>
+                
+                </div>
+                
+                <div class="BREAK"></div>
+                
+                {block:Source}
+                <div class="BY">
+                
+                  {Source}
+                
+                </div>
+                {/block:Source}
+                
+              {/block:Quote}
+              
+              <!-- /QUOTE -->
+
+              <!-- LINK -->
+              
+              {block:Link}
+                
+                <div class="THE-LINK">
+                
+                  <a href="{URL}" target="{Target}">{Name}</a>
+                    
+                </div>
+                
+                <div class="INFO">
+                  <a href="{URL}" target="{Target}">
+                    {URL}
+                  </a>
+                </div>
+                
+                {block:Description}         
+                <div class="MARGIN">{Description}</div>
+                {/block:Description}
+                
+              {/block:Link}
+              
+              <!-- /LINK -->
+
+              <!-- CHAT -->
+              
+              {block:Chat}
+                
+                <ul class="CHAT">
+                
+                  {block:Lines}
+                  <li class="{Alt} {UserNumber}">{block:Label}<strong>{Label}</strong> {/block:Label}{Line}</li>
+                  {/block:Lines}
+                  
+                </ul>
+                
+              {/block:Chat}
+              
+              <!-- /CHAT -->
+
+              <!-- AUDIO -->
+              
+              {block:Audio}
+                
+                <div class="PLAYER">
+                
+                  <div class="ALBUMART">
+                    
+                    {block:AlbumArt}<img  alt="" src="{AlbumArtURL}" />{/block:AlbumArt}
+                    
+                  </div>
+                  
+                  <div class="OVERLAY">
+                    
+                    <div class="OBJ">
+                      {AudioPlayerGrey}
+                    </div>
+                  
+                    <div class="COUNT">
+                      This track has had {PlayCountWithLabel}
+                    </div>
+                    
+                    <div class="TRACK">
+                      {block:TrackName}
+                        <strong>{TrackName}</strong>
+                      {/block:TrackName}
+                      
+                      {block:TrackName}
+                        {block:Artist}
+                          by
+                        {/block:Artist}
+                      {/block:TrackName}
+                      
+                      {block:Artist}
+                      <a href="http://last.fm/{Artist}">{Artist}</a>
+                      {/block:Artist}
+                    </div>
+                    
+                  </div>
+                
+                </div>
+                
+                {block:Caption}
+                  {Caption}
+                {/block:Caption}
+                
+              {/block:Audio}
+              
+              <!-- /AUDIO -->   
+              
+            </div>
+                    
+          </div> <!-- .entry -->
+                  
+        </div> <!-- .row .post -->
+
+        <hr/>
+
+        {/block:Posts}
+                                            
+      </div> <!-- .posts -->
+      
+      {block:Pagination}
+      <ul class="pager">
+        {block:PreviousPage}
+        <li><a href="{PreviousPage}">{lang:Previous page}</a></li>
+        {/block:PreviousPage}
+
+        {block:NextPage}
+        <li><a href="{NextPage}">{lang:Next page}</a></li>
+        {/block:NextPage}
+      </ul>
+      {/block:Pagination}
+
+      <footer class="footer">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p><a href="https://github.com/mikejarema/bootstrap-tumblr-theme/">Bootstrap Tumblr Theme</a> &copy; <a href="http://mikejarema.com">Mike Jarema</a>.</p>
+        <p>{lang:Powered by Tumblr 2}.</p>
+        <p>Icons from <a href="http://glyphicons.com">Glyphicons Free</a>, licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+      </footer>
+      
+    </div>
+    
+    {block:IfGoogleAnalyticsUACode}
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+      var pageTracker = _gat._getTracker("{text:Google Analytics UA Code}");
+      pageTracker._trackPageview();
+      } catch(err) {}
+    </script>
+    {/block:IfGoogleAnalyticsUACode}
+
+    <!-- ======== SCRIPTS ======== -->
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://static.tumblr.com/vv8cdma/obbm0fc3v/bootstrap.min.js"></script>    
+
+  </body> 
+</html>
