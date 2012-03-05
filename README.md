@@ -4,7 +4,7 @@
 
 *Why*: To make it easy to keep a consistent design between a Bootstrap-based web app and corresponding blog.
 
-*How*: Cloned Simon Fleet's Royal Ribbon theme, and rebuilt it with Bootstrap markup and styles.
+*How*: Borrowed the structure from the awesome Royal Ribbon theme, and recoded it with Bootstrap markup and styles.
 
 
 ## Details
