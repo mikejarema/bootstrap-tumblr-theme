@@ -30,4 +30,6 @@ TODO
 
 # License
 
-The MIT License - Copyright (c) 2012 [Mike Jarema](http://mikejarema.com) - A [Rapid Product Prototyping Tool](http://producteer.com)
+The MIT License - Copyright (c) 2012 [Mike Jarema](http://mikejarema.com)
+
+Bootstrap Tumblr Theme is one of Mike's [Rapid Product Prototyping Tools](http://producteer.com)
