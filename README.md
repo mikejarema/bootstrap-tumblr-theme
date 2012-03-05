@@ -30,4 +30,4 @@ TODO
 
 # License
 
-The MIT License - Copyright (c) 2012 [Mike Jarema](http://mikejarema.com) - 
+The MIT License - Copyright (c) 2012 [Mike Jarema](http://mikejarema.com) - One of my [Rapid Product Prototyping Tools](http://producteer.com)
