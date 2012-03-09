@@ -2,12 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"> 
   <head> 
  
-    <meta name="if:Center photo post captions" content="0" />
-    <meta name="if:Show archive link" content="0" />
-    <meta name="if:Show tags" content="1" />
-    <meta name="text:Post Font" content="Helvetica, Arial" />
     <meta name="text:Google Analytics UA Code" content="" /> 
-    <meta name="text:Blog Background" content="" />
  
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
     <meta name="description" content="{MetaDescription}" /> 
@@ -70,6 +65,12 @@
               </li>
               {/block:NotEnglish}
 
+              <li class="divider-vertical"></li>
+              
+              <li>
+                <a href="/archive">{lang:Archive}</a>
+              </li>
+              
               {block:AskEnabled}
               <li class="divider-vertical"></li>
               
@@ -86,14 +87,6 @@
               </li>
               {/block:SubmissionsEnabled} 
 
-              {block:IfShowArchiveLink}
-              <li class="divider-vertical"></li>
-              
-              <li>
-                <a href="/archive">{lang:Archive}</a>
-              </li>
-              {/block:IfShowArchiveLink}
-              
               {block:Pages}
               <li class="divider-vertical"></li>
               
@@ -271,24 +264,14 @@
                 <div class="CENTER">
               
                   {LinkOpenTag}<img alt="{PhotoAlt}" src="{PhotoURL-500}" />{LinkCloseTag}
-                  
-                  {block:IfCenterPhotoPostCaptions}
-                    {block:Caption}
-                      <div class="CAPTION">
-                        {Caption}
-                      </div>
-                    {/block:Caption}
-                  {/block:IfCenterPhotoPostCaptions}
-                  
+
                 </div>
 
-                {block:IfNotCenterPhotoPostCaptions}
-                  {block:Caption}
-                    <div class="CAPTION">
-                      {Caption}
-                    </div>
-                  {/block:Caption}
-                {/block:IfNotCenterPhotoPostCaptions}
+                {block:Caption}
+                  <div class="CAPTION">
+                    {Caption}
+                  </div>
+                {/block:Caption}
                 
               {/block:Photo}
               
