@@ -2,7 +2,7 @@
 
 *What*: A Tumblr theme built on top of Twitter's Bootstrap framework (v2.x).
 
-*Why*: To minimize the effort required to maintain consistent designs on both a Bootstrap-based web app and its corresponding Tumblr blog.
+*Why*: To minimize the effort required to maintain consistent designs on both a Bootstrap-based web app and its blog.
 
 *How*: Borrowed the overall structure from the awesome Royal Ribbon theme, and rebuilt it using Bootstrap markup and styles.
 
