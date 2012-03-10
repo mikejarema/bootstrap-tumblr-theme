@@ -32,90 +32,80 @@
 
   </head> 
   <body>
-  
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
 
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
+    <header>
+      <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
 
-          <a class="brand" href="/">
-            {Title}
-          </a>
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
 
-          <div class="nav-collapse">
-            <ul class="nav">
-              {block:English}
+            <a class="brand" href="/">
+              {Title}
+            </a>
+
+            <div class="nav-collapse">
+              <ul class="nav">
+                {block:English}
+                  <li>
+                    <a href="http://tumblr.com/follow/{Name}">
+                      Follow
+                    </a>
+                  </li>
+                {/block:English}
+
+                {block:NotEnglish}
                 <li>
-                  <a href="http://tumblr.com/follow/{Name}">
-                    Follow
-                  </a>
+                  <a href="http://tumblr.com/follow/{Name}">{lang:Follow me}</a>
                 </li>
-              {/block:English}
+                {/block:NotEnglish}
 
-              {block:NotEnglish}
-              <li>
-                <a href="http://tumblr.com/follow/{Name}">{lang:Follow me}</a>
-              </li>
-              {/block:NotEnglish}
+                <li class="divider-vertical"></li>
+                
+                <li>
+                  <a href="/archive">{lang:Archive}</a>
+                </li>
+                
+                {block:AskEnabled}
+                <li class="divider-vertical"></li>
+                
+                <li>
+                  <a href="/ask">Ask Me Anything</a>
+                </li>
+                {/block:AskEnabled}
 
-              <li class="divider-vertical"></li>
+                {block:SubmissionsEnabled}
+                <li class="divider-vertical"></li>
               
-              <li>
-                <a href="/archive">{lang:Archive}</a>
-              </li>
-              
-              {block:AskEnabled}
-              <li class="divider-vertical"></li>
-              
-              <li>
-                <a href="/ask">Ask Me Anything</a>
-              </li>
-              {/block:AskEnabled}
+                <li>
+                  <a href="/submit">Submit Something</a>
+                </li>
+                {/block:SubmissionsEnabled} 
 
-              {block:SubmissionsEnabled}
-              <li class="divider-vertical"></li>
-            
-              <li>
-                <a href="/submit">Submit Something</a>
-              </li>
-              {/block:SubmissionsEnabled} 
-
-              {block:Pages}
-              <li class="divider-vertical"></li>
-              
-              <li>
-                <a href="{URL}">{Label}</a>
-              </li>
-              {/block:Pages}
-            </ul>
-  
-            <form class="navbar-search pull-right" action="/search" method="get">
-              <input type="text" class="search-query" placeholder="{lang:Search}..." id="search" name="q" value="" />
-            </form>
-          </div> <!-- nav-collapse -->
-
-        </div> <!-- container -->
-      </div> <!-- navbar-inner -->
-    </div> <!-- navbar navbar-fixed-top -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+                {block:Pages}
+                <li class="divider-vertical"></li>
+                
+                <li>
+                  <a href="{URL}">{Label}</a>
+                </li>
+                {/block:Pages}
+              </ul>
     
+              <form class="navbar-search pull-right" action="/search" method="get">
+                <input type="text" class="search-query" placeholder="{lang:Search}..." id="search" name="q" value="" />
+              </form>
+            </div> <!-- nav-collapse -->
+
+          </div> <!-- container -->
+        </div> <!-- navbar-inner -->
+      </div> <!-- navbar navbar-fixed-top -->
+    </header>
+
+
     <div class="container">
 
       {block:IndexPage}
