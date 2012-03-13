@@ -18,6 +18,10 @@
       body { padding-top: 60px; } /* room for fixed nav-bar */
       .tags { margin-bottom: 10px;}
       .tag { margin-bottom: 5px;}
+      .entry { background-color: white; border-radius: 5px; padding-top: 20px; padding-bottom: 20px; }
+      .entry > * { padding-left: 20px; padding-right: 20px; }
+      .date { margin-bottom: 10px; }
+      .entry .title { margin-bottom: 10px; }
     </style>
     <link href="http://static.tumblr.com/vv8cdma/pVJm0fbxk/bootstrap-responsive.min.css" rel="stylesheet">
 
@@ -183,11 +187,11 @@
             <div class="title">
               
               {block:Title}
-              <div class="TITLE-TEXT">
+              <h2>
                 <a href="{Permalink}">
                   {Title}
                 </a>
-              </div>
+              </h2>
               {/block:Title}
                                         
             </div> <!-- .title -->
