@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"> 
+<!DOCTYPE html>
+<html>
   <head> 
  
     <meta name="text:Google Analytics UA Code" content="" /> 
@@ -18,10 +18,20 @@
       body { padding-top: 60px; } /* room for fixed nav-bar */
       .tags { margin-bottom: 10px;}
       .tag { margin-bottom: 5px;}
-      .entry { background-color: white; border-radius: 5px; padding-top: 20px; padding-bottom: 20px; }
+      .entry { background-color: white; border-radius: 5px; padding-top: 20px; padding-bottom: 20px; position: relative; }
       .entry > * { padding-left: 20px; padding-right: 20px; }
       .date { margin-bottom: 10px; }
       .entry .title { margin-bottom: 10px; }
+      .speech-bubble { background-image: url(http://static.tumblr.com/vv8cdma/4AAm155zf/speech-bubble.png); width: 16px; height: 16px; position: absolute; padding: 0; left: -16px; top: 16px; }
+      .author { margin-bottom: 10px; }
+      .author img { float: left; background-color: white; }
+      .author .author-name { line-height: 16px; padding-top: 14px; margin-left: 64px; }
+      .author .author-name .attribution { font-size: 80%; }
+      @media (max-width: 980px) { 
+        .author img { float: none; }  
+        .author .author-name { margin-left: 0; }
+        .speech-bubble { display: none; }
+      }  
     </style>
     <link href="http://static.tumblr.com/vv8cdma/pVJm0fbxk/bootstrap-responsive.min.css" rel="stylesheet">
 
@@ -150,6 +160,16 @@
         <div class="row post {block:Text}text{/block:Text}{block:Photo}photo{/block:Photo}{block:Quote}quote{/block:Quote}{block:Video}video{/block:Video}{block:Link}link{/block:Link}{block:Chat}chat{/block:Chat}{block:Audio}audio{/block:Audio}{block:Answer}answer{/block:Answer}">  
 
           <div class="span2">
+            {block:GroupMembers} 
+            <div class="author">
+              <a href="{PostAuthorURL}">
+                <img src="{PostAuthorPortraitURL-48}" class="thumbnail">
+              </a>
+              <div class="author-name"><span class="attribution">Posted by</span><br/><a href="{PostAuthorURL}" target="_blank">{PostAuthorTitle}</a></div>
+              <div style="clear: both"></div>
+            </div>
+            {/block:GroupMembers} 
+
             <div class="date">
               {block:Date}
               {block:NotReblog}
@@ -183,6 +203,10 @@
           </div> <!-- .span2 -->
 
           <div class="span10 entry">
+
+            {block:GroupMembers} 
+            <div class="speech-bubble"></div>
+            {/block:GroupMembers} 
           
             <div class="title">
               
