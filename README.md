@@ -1,10 +1,12 @@
-# Bootstrap Tumblr Theme
+# [Bootstrap Tumblr Theme](https://github.com/mikejarema/bootstrap-tumblr-theme)
 
-*What*: A Tumblr theme built on top of Twitter's Bootstrap framework (v2.x).
+**What**: A Tumblr theme built on top of Twitter's Bootstrap framework (v2.x).
 
-*Why*: To minimize the effort required to maintain consistent designs on both a Bootstrap-based web app and its blog.
+**Why**: To minimize the effort required to maintain consistent designs on both a Bootstrap-based web app and its blog.
 
-*How*: Borrowed the overall structure from the awesome Royal Ribbon theme, and rebuilt it using Bootstrap markup and styles.
+**How**: Borrowed the overall structure from the awesome Royal Ribbon theme, and rebuilt it using Bootstrap markup and styles.
+
+Further reading on my blog: [A Tumblr Theme Built on Twitter’s Bootstrap Framework](http://mikejarema.com/post/19592127057/a-tumblr-theme-built-on-twitters-bootstrap-framework)
 
 
 ## Details
@@ -45,4 +47,3 @@ For now, simply upload bootstrap-tumblr-theme.html in its entirety to the HTML c
 
 The MIT License - Copyright (c) 2012 [Mike Jarema](http://mikejarema.com)
 
-[Bootstrap Tumblr Theme](https://github.com/mikejarema/bootstrap-tumblr-theme) is one of my open-sourced [Rapid Product Prototyping Tools](http://producteer.com)
