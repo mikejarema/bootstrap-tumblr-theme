@@ -16,17 +16,31 @@
 
     <link href="http://static.tumblr.com/vv8cdma/Pigm0fc2m/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
+      
+      /* --- high-level --- */
       body { 
         padding-top: 60px; /* room for fixed nav-bar */
         background-image: url('{image:Background}'); 
       } 
+      
+      /* --- tags --- */
       .tags { margin-bottom: 10px;}
       .tag { margin-bottom: 5px;}
+      
+      /* --- entry --- */
       .entry { background-color: white; border-radius: 5px; padding-top: 20px; padding-bottom: 20px; position: relative; }
       .entry > * { padding-left: 20px; padding-right: 20px; }
       .date { margin-bottom: 10px; }
       .entry .title { margin-bottom: 10px; }
+      .entry h2 { margin-top: 20px; }
+      
+      /* --- speech bubble: visually connects entries to authors --- */ 
       .speech-bubble { background-image: url(http://static.tumblr.com/vv8cdma/4AAm155zf/speech-bubble.png); width: 16px; height: 16px; position: absolute; padding: 0; left: -16px; top: 16px; }
+      @media (max-width: 980px) { 
+        .speech-bubble { display: none; }
+      }  
+
+      /* --- author --- */
       .author { margin-bottom: 10px; }
       .author img { float: left; background-color: white; }
       .author .author-name { line-height: 16px; padding-top: 8px; margin-left: 64px; }
@@ -34,9 +48,13 @@
       @media (max-width: 980px) { 
         .author img { float: none; }  
         .author .author-name { margin-left: 0; }
-        .speech-bubble { display: none; }
       }  
-      .entry h2 { margin-top: 20px; }
+
+      /* --- notes --- */
+      .notes-container { background-color: white; border-radius: 5px; position: relative; margin-top: 20px; }
+      .notes-container .notes { padding: 20px; margin: 0; }
+      .notes-container .notes ol { list-style: none; }
+
     </style>
     <link href="http://static.tumblr.com/vv8cdma/pVJm0fbxk/bootstrap-responsive.min.css" rel="stylesheet">
 
@@ -420,6 +438,14 @@
           </div> <!-- .entry -->
                   
         </div> <!-- .row .post -->
+
+        {block:NoteCount}
+        <div class="row">
+          <div class="span10 offset2 notes-container">
+            {PostNotes}
+          </div> <!-- .notes-container -->
+        </div>
+        {/block:NoteCount}
 
         <hr/>
 
