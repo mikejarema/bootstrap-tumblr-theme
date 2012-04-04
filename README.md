@@ -28,7 +28,6 @@ For now, simply upload bootstrap-tumblr-theme.html in its entirety to the HTML c
 
 ## Roadmap
 
-* support for Tumblr's reblogging / notes (critical - this is a key part of discovery and engagement within Tumblr)
 * support for Disqus comments
 * release as a theme within Tumblr's theme gallery
 * make it better&#8482;
