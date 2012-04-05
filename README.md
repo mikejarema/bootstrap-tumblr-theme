@@ -28,9 +28,9 @@ For now, simply upload bootstrap-tumblr-theme.html in its entirety to the HTML c
 
 ## Configuration Variables
 
-**Background** Background image.
+**Background** - Background image.
 
-**Sharing Buttons** Tweet button (optional via @account & post-tweet follow recommendation), Facebook Like button.
+**Sharing Buttons** - Tweet button (optional via @account & post-tweet follow recommendation), Facebook Like button.
 
 
 ## Roadmap
