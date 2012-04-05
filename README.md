@@ -32,10 +32,11 @@ For now, simply upload bootstrap-tumblr-theme.html in its entirety to the HTML c
 
 **Sharing Buttons** - Tweet button (optional via @account & post-tweet follow recommendation), Facebook Like button.
 
+**Disqus Shortname** - Adds Disqus-powered comments to each post permalink page.
+
 
 ## Roadmap
 
-* support for Disqus comments
 * release as a theme within Tumblr's theme gallery
 * make it better&#8482;
   * translation: looking for feedback and bug reports, please [complain](https://github.com/mikejarema/bootstrap-tumblr-theme/issues), fork and contribute!)

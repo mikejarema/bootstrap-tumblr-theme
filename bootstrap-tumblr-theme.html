@@ -11,6 +11,9 @@
     <meta name="text:Tweet Follow Account" content=""/>
     <meta name="if:Show Like Button" content="1"/>
 
+    <!-- Comments -->
+    <meta name="text:Disqus Shortname" content=""/>
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
     <meta name="description" content="{MetaDescription}" /> 
     <link href="{Favicon}" rel="shortcut icon" /> 
@@ -56,10 +59,10 @@
         .author .author-name { margin-left: 0; }
       }  
 
-      /* --- notes --- */
-      .notes-container { background-color: white; border-radius: 5px; position: relative; margin-top: 20px; }
-      .notes-container .notes { padding: 20px; margin: 0; }
-      .notes-container .notes ol { list-style: none; }
+      /* --- notes and comments --- */
+      .notes-container, .comments-container { background-color: white; border-radius: 5px; position: relative; margin-top: 20px; }
+      .notes-container .notes, .comments-container #disqus_thread { padding: 20px; margin: 0; }
+      .notes-container ol.notes { list-style: none; }
 
       /* --- sharing links ---*/
       .share-links { margin-top: 10px; }
@@ -243,6 +246,10 @@
               </a>
             </div>
             {/block:NoteCount} 
+
+            {block:IfDisqusShortname}
+            <a class="dsq-comment-count" href="{Permalink}#disqus_thread">{lang:Comments}</a>
+            {/block:IfDisqusShortname}
 
             <div class="share-links">
               {block:IfShowTweetButton}
@@ -484,6 +491,18 @@
                   
         </div> <!-- .row .post -->
 
+        {block:PermalinkPage} 
+        {block:IfDisqusShortname}
+        <div class="row">
+          <div class="span10 offset2 comments-container">
+            <div id="disqus_thread"></div>
+            <script type="text/javascript" src="http://{text:Disqus Shortname}.disqus.com/embed.js"></script>
+            <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
+          </div> <!-- .comments-container -->
+        </div>
+        {/block:IfDisqusShortname}
+        {/block:PermalinkPage} 
+
         {block:NoteCount}
         <div class="row">
           <div class="span10 offset2 notes-container" id="notes">
@@ -540,5 +559,23 @@
     {block:IfShowTweetButton}
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     {/block:IfShowTweetButton}
+
+    {block:IfDisqusShortname}
+    <script type="text/javascript">
+    //<![CDATA[
+    (function() {
+      var links = document.getElementsByTagName('a');
+      var query = '?';
+      for(var i = 0; i < links.length; i++) {
+        if(links[i].href.indexOf('#disqus_thread') >= 0) {
+          query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+        }
+      }
+      document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
+    })();
+    //]]>
+    </script>
+    {/block:IfDisqusShortname}
+
   </body> 
 </html>
