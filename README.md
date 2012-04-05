@@ -26,6 +26,13 @@ For now, simply upload bootstrap-tumblr-theme.html in its entirety to the HTML c
 * Save and start posting!
 
 
+## Configuration Variables
+
+**Background** Background image.
+
+**Sharing Buttons** Tweet button (optional via @account & post-tweet follow recommendation), Facebook Like button.
+
+
 ## Roadmap
 
 * support for Disqus comments
