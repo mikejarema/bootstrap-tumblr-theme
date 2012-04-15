@@ -41,7 +41,7 @@ For now, simply upload bootstrap-tumblr-theme.html in its entirety to the HTML c
 
 ## Roadmap
 
-* release as a theme within Tumblr's theme gallery
+* release as a theme within Tumblr's theme gallery *(submitted and pending approval)*
 * make it better&#8482;
   * translation: looking for feedback and bug reports, please [complain](https://github.com/mikejarema/bootstrap-tumblr-theme/issues), fork and contribute!)
 
