@@ -4,7 +4,9 @@
   <head> 
  
     <meta name="text:Google Analytics UA Code" content="" /> 
-    <meta name="image:Background" content="http://static.tumblr.com/vv8cdma/Ddzm1ypam/chruch.png"/>
+    <meta name="image:Background" content="http://static.tumblr.com/vv8cdma/Ddzm1ypam/chruch.png" />
+    <meta name="text:Application Stylesheet URL" content="" />
+    <meta name="if:Show Description On Index" content="1" />
 
     <!-- Sharing Buttons -->
     <meta name="if:Show Tweet Button" content="1"/>
@@ -72,8 +74,10 @@
     </style>
     <link href="http://static.tumblr.com/vv8cdma/pVJm0fbxk/bootstrap-responsive.min.css" rel="stylesheet">
 
-    <!-- Link to your app's stylesheet here -->
-    <!-- <link href="http://example.com/assets/application.css" rel="stylesheet"> -->
+    {block:IfApplicationStylesheetURL}
+    <!-- Import application styling -->
+    <link href="{text:Application Stylesheet URL}" rel="stylesheet">
+    {/block:IfApplicationStylesheetURL}
  
     <style type="text/css">
       <!--
@@ -171,10 +175,12 @@
     <div class="container">
 
       {block:IndexPage}
+      {block:IfShowDescriptionOnIndex}
       <div class="hero-unit">
         <h1>{Title}</h1>
         <p>{Description}</p>
       </div>
+      {/block:IfShowDescriptionOnIndex}
       {/block:IndexPage}
 
       <div class="posts">

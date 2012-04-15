@@ -34,6 +34,10 @@ For now, simply upload bootstrap-tumblr-theme.html in its entirety to the HTML c
 
 **Disqus Shortname** - Adds Disqus-powered comments to each post permalink page.
 
+**Application Stylesheet** - Drop in your application stylesheet URL here to instruct Tumblr to assimilate your application styling. Hopefully it "just works". Failing that, you can either drop in some Custom CSS or customize the theme markup directly.
+
+**Show Description On Index** - Optionally hide the hero unit (blog description) on the index page.
+
 
 ## Roadmap
 
