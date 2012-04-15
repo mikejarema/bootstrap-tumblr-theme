@@ -1,5 +1,10 @@
 # Bootstrap Tumblr Theme
 
+*Install this theme on your Tumblr using this link: http://www.tumblr.com/theme/34547*
+
+
+## Overview
+
 **What**: A Tumblr theme built on top of Twitter's Bootstrap framework (v2.x).
 
 **Why**: To minimize the effort required to maintain consistent designs on both a Bootstrap-based web app and its blog.
@@ -16,12 +21,14 @@ By default this theme uses Bootstrap's responsive styles, so it should look sexy
 
 ## Usage
 
-For now, simply upload bootstrap-tumblr-theme.html in its entirety to the HTML customization area of your Tumblr customization page:
+This theme can be installed via Tumblr's theme gallery: http://www.tumblr.com/theme/34547
+
+Take a look at the available configuration variables, particularly the **Application Stylesheet** which lets you pull in any of your existing Bootstrap styles.
+
+Tweaks and modifications to the markup can be made as follows:
 
 * ``http://www.tumblr.com/customize/<your-blog>``
 * Click ``Edit HTML``
-* Paste the theme's HTML and Save
-* Link to your web app's stylesheet (search the markup for ``example.com``)
 * Tweak to your satisfaction using familiar Bootstrap styles and structure
 * Save and start posting!
 
@@ -41,7 +48,6 @@ For now, simply upload bootstrap-tumblr-theme.html in its entirety to the HTML c
 
 ## Roadmap
 
-* release as a theme within Tumblr's theme gallery *(submitted and pending approval)*
 * make it better&#8482;
   * translation: looking for feedback and bug reports, please [complain](https://github.com/mikejarema/bootstrap-tumblr-theme/issues), fork and contribute!)
 
