@@ -2,6 +2,8 @@
 
 *Install this theme on your Tumblr using this link: http://www.tumblr.com/theme/34547*
 
+*I'll be sure to keep the theme up-to-date with the most recent code. Install it to automatically keep up with future developments.*
+
 ![Preview](http://media.tumblr.com/themes/wide/UMTdXwnhRgL3KYUh.png)
 
 
