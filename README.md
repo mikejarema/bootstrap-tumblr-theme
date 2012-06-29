@@ -63,7 +63,7 @@ Tweaks and modifications to the markup can be made as follows:
 * looking for feedback and bug reports, please [complain](https://github.com/mikejarema/bootstrap-tumblr-theme/issues), fork and contribute!)
 
 
-## Blogs Built With Bootstrap Tumblr Theme
+## Blogs Using Bootstrap Tumblr Theme
 
 * [Namevine Blog](http://blog.namevine.com/)
 * [Mike Jarema's Blog](http://mikejarema.com/)
@@ -76,6 +76,7 @@ Tweaks and modifications to the markup can be made as follows:
 * [Fourist](http://4ist.tumblr.com/)
 * [Edman Goodrich's Blog](http://blog.edmangoodrich.com/)
 * [EmbedTree Blog](http://blog.embedtree.com/)
+* [FilePicker Blog](http://blog.filepicker.io/)
 * _... your site? fork and submit a pull request with your site listed here_ 
 
 
