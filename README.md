@@ -9,7 +9,7 @@
 
 ## Overview
 
-**What**: A Tumblr theme built on top of Twitter's Bootstrap framework (v2.x).
+**What**: A Tumblr theme built on top of Twitter's Bootstrap framework (v2.x), with Font Awesome icons.
 
 **Why**: To minimize the effort required to maintain consistent designs on both a Bootstrap-based web app and its blog.
 
@@ -20,7 +20,9 @@
 
 This theme provides a very basic and barebones framework within which to apply your own styles.  Typically this involves linking to your web app's existing stylesheet, then applying further custom CSS to polish off the integration with Tumblr.
 
-By default this theme uses Bootstrap's responsive styles, so it should look sexy across devices and form factors.  Of course the devil is in the details, so be sure to tweak for your needs.
+By default this theme uses Bootstrap's responsive styles, so it should look sexy across devices and form factors. This is optionally disabled via Tumblr's appearance options.
+
+Of course the devil is in the details, so be sure to tweak for your needs.
 
 
 ## Usage
@@ -49,16 +51,31 @@ Tweaks and modifications to the markup can be made as follows:
 
 **Show Description On Index** - Optionally hide the hero unit (blog description) on the index page.
 
+**Use Responsive Styles** - Determines whether or not the styles used for the theme adapt to different screen sizes & formats.
+
+**Link Logo To Application** - Should the logo (top left, in the nav) link to your Application URL?
+
+**Application URL** - If "Link Logo To Application" is enabled, your blog logo links to this URL.
+
 
 ## Roadmap
 
-* make it better&#8482;
-  * translation: looking for feedback and bug reports, please [complain](https://github.com/mikejarema/bootstrap-tumblr-theme/issues), fork and contribute!)
+* looking for feedback and bug reports, please [complain](https://github.com/mikejarema/bootstrap-tumblr-theme/issues), fork and contribute!)
 
 
 ## Blogs Built With Bootstrap Tumblr Theme
 
 * [Namevine Blog](http://blog.namevine.com/)
+* [Mike Jarema's Blog](http://mikejarema.com/)
+* [The Unscatter.com Blog](http://company.unscatter.com/)
+* [Neil Merton's Personal Site](http://neil.merton.me/)
+* [Everything in the Sky](http://everythinginthesky.com/)
+* [Sam The Cobra's Blog](http://blog.samthecobra.com/)
+* [GelaSkins Blog](http://gelaskins.tumblr.com/)
+* [Joshua Morrison Photography](http://joshuamorrisonphotography.tumblr.com/)
+* [Fourist](http://4ist.tumblr.com/)
+* [Edman Goodrich's Blog](http://blog.edmangoodrich.com/)
+* [EmbedTree Blog](http://blog.embedtree.com/)
 * _... your site? fork and submit a pull request with your site listed here_ 
 
 
