@@ -53,6 +53,13 @@
         padding-top: 60px; /* room for fixed nav-bar */
         background-image: url('{image:Background}'); 
       } 
+      {block:IfUseResponsiveStyles}
+      @media (max-width:979px) {
+        body {
+          padding-top: 0;
+        }
+      }
+      {/block:IfUseResponsiveStyles}
       
       /* --- tags --- */
       .tags { margin-bottom: 10px;}
