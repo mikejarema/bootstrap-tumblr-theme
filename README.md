@@ -77,6 +77,7 @@ Tweaks and modifications to the markup can be made as follows:
 * [Edman Goodrich's Blog](http://blog.edmangoodrich.com/)
 * [EmbedTree Blog](http://blog.embedtree.com/)
 * [FilePicker Blog](http://blog.filepicker.io/)
+* [Alex Seville's Blog](http://blog.alexanderseville.com/)
 * _... your site? fork and submit a pull request with your site listed here_ 
 
 
