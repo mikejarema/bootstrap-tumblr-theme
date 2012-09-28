@@ -79,6 +79,11 @@ Tweaks and modifications to the markup can be made as follows:
 * [FilePicker Blog](http://blog.filepicker.io/)
 * [Alex Seville's Blog](http://blog.alexanderseville.com/)
 * [AppSocially's Blog](http://blog.appsocial.ly/)
+* [Bootswatch Blog](http://news.bootswatch.com/post/32306706557/a-tumblr-theme-for-bootswatch)
+* [GetHyper.com](http://gethyper.com/)
+* [Ben Bowler's Blog](http://benbowler.com/)
+* [Jim Mueller's Blog](http://blog.jimueller.com/)
+* [ICodeLike.Me](http://icodelike.me/)
 * _... your site? fork and submit a pull request with your site listed here_ 
 
 
