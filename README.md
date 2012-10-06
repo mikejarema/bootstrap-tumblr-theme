@@ -84,6 +84,9 @@ Tweaks and modifications to the markup can be made as follows:
 * [Ben Bowler's Blog](http://benbowler.com/)
 * [Jim Mueller's Blog](http://blog.jimueller.com/)
 * [ICodeLike.Me](http://icodelike.me/)
+* [/dev/nfc](http://devnfc.com/)
+* [Nick Roseboro's Blog](http://blog.nickroseboro.com/)
+* [Distrify Blog](http://blog.distrify.com/)
 * _... your site? fork and submit a pull request with your site listed here_ 
 
 
